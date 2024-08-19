@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/dinhtungdu/userscripts
 // @version      1.0
 // @description  Copy the title link of the current GitHub issue/PR when you press "c" followed by "c"
 // @author       Tung Du
