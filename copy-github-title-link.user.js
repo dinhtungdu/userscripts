@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
 // @namespace    https://github.com/dinhtungdu/userscripts
-// @version      1.1
+// @version      1.2
 // @description  Copy the title link of the current GitHub issue/PR when you press "q" followed by "q"
 // @author       Tung Du
 // @match        https://github.com/*/*/issues/*
@@ -23,7 +23,7 @@
         if (keysPressed[0] === 'q' && keysPressed[1] === 'q') {
             const titleElement = document.querySelector('.gh-header-title');
             if (titleElement) {
-                const title = titleElement.textContent.trim();
+                const title = titleElement.textContent.trim().replace(/(\r\n|\n|\r)/gm, "");
                 const url = window.location.href;
                 const htmlLink = `<a href="${url}">${title}</a>`;
 
