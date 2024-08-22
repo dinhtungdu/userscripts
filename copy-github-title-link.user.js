@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
 // @namespace    https://github.com/dinhtungdu/userscripts
-// @version      1.2
+// @version      1.2.1
 // @description  Copy the title link of the current GitHub issue/PR when you press "q" followed by "q"
 // @author       Tung Du
 // @match        https://github.com/*/*/issues/*
