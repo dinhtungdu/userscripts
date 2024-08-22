@@ -23,7 +23,7 @@
         if (keysPressed[0] === 'q' && keysPressed[1] === 'q') {
             const titleElement = document.querySelector('.gh-header-title');
             if (titleElement) {
-                const title = titleElement.textContent.trim().replace(/(\r\n|\n|\r)/gm, "");
+                const title = titleElement.textContent.trim().replace(/(\r\n|\n|\r)/gm, "").replace(/ +(?= )/g,'');
                 const url = window.location.href;
                 const htmlLink = `<a href="${url}">${title}</a>`;
 
