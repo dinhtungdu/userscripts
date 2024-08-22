@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
 // @namespace    https://github.com/dinhtungdu/userscripts
-// @version      1.2.3
-// @description  Copy the title link of the current GitHub issue/PR when you press "e" followed by "e"
+// @version      1.2.4
+// @description  Copy the title link of the current GitHub issue/PR when you press "w" followed by "w"
 // @author       Tung Du
 // @match        https://github.com/*/*/issues/*
 // @match        https://github.com/*/*/pull/*
@@ -20,7 +20,7 @@
             keysPressed.shift();
         }
 
-        if (keysPressed[0] === 'e' && keysPressed[1] === 'e') {
+        if (keysPressed[0] === 'w' && keysPressed[1] === 'w') {
             const titleElement = document.querySelector('.gh-header-title');
             if (titleElement) {
                 const title = titleElement.textContent.trim().replace(/(\r\n|\n|\r)/gm, "").replace(/ +(?= )/g,'');
