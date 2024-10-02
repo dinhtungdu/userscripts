@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
 // @namespace    https://github.com/dinhtungdu/userscripts
-// @version      1.2.7
+// @version      1.2.8
 // @description  Copy the title link of the current GitHub issue/PR when you press "w" followed by "w"
 // @author       Tung Du
 // @match        https://github.com/*/*/issues/*
@@ -15,14 +15,13 @@
 
   function isUserInAnEditableArea() {
     const tagName = document.activeElement.tagName.toLowerCase();
-
     return (
       (tagName === "input" &&
         ["text", "password", "email", "number", "tel", "url"].includes(
-          element.type,
+          document.activeElement.type,
         )) ||
       tagName === "textarea" ||
-      element.isContentEditable
+      document.activeElement.isContentEditable
     );
   }
 
