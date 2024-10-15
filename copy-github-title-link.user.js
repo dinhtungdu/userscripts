@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy GitHub Issue/PR Title Link
 // @namespace    https://github.com/dinhtungdu/userscripts
-// @version      1.2.9
+// @version      1.2.10
 // @description  Copy the title link of the current GitHub issue/PR when you press "w" followed by "w"
 // @author       Tung Du
 // @match        https://github.com/*/*/issues/*
@@ -29,6 +29,7 @@
     if (isUserInAnEditableArea()) {
       return;
     }
+
     keysPressed.push(e.key);
 
     if (keysPressed.length > 2) {
@@ -54,7 +55,7 @@
       keysPressed = []; // Reset the keys
     }
 
-    if (keysPressed[0] === "c" && keysPressed[1] === "c") {
+    if (keysPressed[0] === "w" && keysPressed[1] === "e") {
       const url = window.location.href;
       const issueNumber = url.match(/\d+/)[0];
       if (issueNumber) {
