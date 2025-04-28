@@ -26,6 +26,7 @@
 }
 header.o2-comment-header {
   padding: 0 !important;
+  transform: translateY(-6px);
 }
 .o2-comment .o2-comment-footer-actions p {
   margin-bottom: 0em !important;
