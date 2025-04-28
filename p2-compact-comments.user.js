@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         P2 compact comments
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-28
+// @version      2025-04-28-15-49
 // @description  try to take over the world!
 // @author       You
 // @match        *.wordpress.com/*
@@ -36,7 +36,7 @@ header.o2-comment-header {
 }
 .o2-child-comments {
   margin-top: 0.5em !important;
-  padding-left: 1.5em !important;
+  padding-left: 1em !important;
   border-left: 1px solid;
   border-bottom: 1px solid;
   margin-bottom: -1px;
