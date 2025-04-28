@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         P2 compact comments
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-28-16-50
+// @version      2025-04-28-16-54
 // @description  try to take over the world!
 // @author       You
 // @match        *.wordpress.com/*
@@ -12,8 +12,11 @@
 (function () {
   "use strict";
   const css = `
+.o2-post-comments .comment-content,
+.o2-editor-preview, .p2-editor .block-editor-writing-flow {
+  font-size: 0.875em;
+}
 .o2-post-comments .comment-content {
-  font-size: 0.875em !important;
   margin-left: 0em !important;
   margin-top: 0em !important;
 }
@@ -52,9 +55,6 @@ header.o2-comment-header {
 }
 .o2-child-comments .o2-comment + .o2-comment {
   margin-top: 0.5em;
-}
-.o2-editor-preview, .p2-editor .block-editor-writing-flow {
-  font-size: 14px;
 }
     `;
   GM_addStyle(css);
