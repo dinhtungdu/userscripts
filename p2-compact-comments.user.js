@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         P2 compact comments
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-28-16-54
+// @version      2025-05-01
 // @description  try to take over the world!
 // @author       You
 // @match        *.wordpress.com/*
@@ -13,8 +13,9 @@
   "use strict";
   const css = `
 .o2-post-comments .comment-content,
+body.gutenberg .o2-comment .wp-block[data-type="core/list"] li,
 .o2-editor-preview, .p2-editor .block-editor-writing-flow {
-  font-size: 0.875em;
+  font-size: 0.875em !important;
 }
 .o2-post-comments .comment-content {
   margin-left: 0em !important;
